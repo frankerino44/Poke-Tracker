@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 hpET.setText("0");
                 attackET.setText("0");
                 defenseET.setText("0");
+                level.setSelection(0);
                 genderRadioGroup.clearCheck();
 
                 nationalNumberLabel.setTextColor(Color.BLACK);
