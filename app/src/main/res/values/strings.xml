@@ -17,4 +17,9 @@
     <string name="reset_button">Reset</string>
     <string name="female_radio_button">Female</string>
     <string name="male_radio_button">Male</string>
+    <string name="view_button">View</string>
+    <string name="delete_button">Delete</string>
+    <string name="back_button">Back</string>
+    <string name="previous_button">&lt;</string>
+    <string name="next_button">&gt;</string>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ViewDatabase">
 
     <TextView
         android:id="@+id/appNameLabel"
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="130dp"
         android:text="@string/national_number_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -134,160 +134,125 @@
         app:layout_constraintStart_toStartOf="@+id/attackLabel"
         app:layout_constraintTop_toBottomOf="@+id/attackLabel" />
 
-    <EditText
-        android:id="@+id/nationalNumberET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/nationalNumberLabel"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/nameET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/nameLabel"
-        app:layout_constraintEnd_toEndOf="@+id/nationalNumberET" />
-
-    <EditText
-        android:id="@+id/speciesET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/speciesLabel"
-        app:layout_constraintEnd_toEndOf="@+id/nameET" />
-
-    <EditText
-        android:id="@+id/heightET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/heightLabel"
-        app:layout_constraintEnd_toEndOf="@+id/speciesET" />
-
-    <EditText
-        android:id="@+id/weightET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/weightLabel"
-        app:layout_constraintEnd_toEndOf="@+id/heightET" />
-
-    <EditText
-        android:id="@+id/hpET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/hpLabel"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/attackET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/attackLabel"
-        app:layout_constraintEnd_toEndOf="@+id/hpET" />
-
-    <EditText
-        android:id="@+id/defenseET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/defenseLabel"
-        app:layout_constraintEnd_toEndOf="@+id/attackET" />
-
     <Button
-        android:id="@+id/saveButton"
+        android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/save_button"
-        app:layout_constraintEnd_toEndOf="@+id/defenseET"
-        app:layout_constraintTop_toBottomOf="@+id/defenseET" />
-
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/reset_button"
-        app:layout_constraintStart_toStartOf="@+id/defenseLabel"
-        app:layout_constraintTop_toTopOf="@+id/saveButton" />
-
-    <RadioGroup
-        android:id="@+id/genderRadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/speciesET"
-        app:layout_constraintTop_toBottomOf="@+id/speciesET">
-
-        <RadioButton
-            android:id="@+id/femaleRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:orientation="horizontal"
-            android:scaleX=".75"
-            android:scaleY=".75"
-            android:text="@string/female_radio_button"
-            android:textSize="16sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/genderLabel"
-            app:layout_constraintEnd_toStartOf="@+id/maleRadioButton" />
-
-        <RadioButton
-            android:id="@+id/maleRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:scaleX=".75"
-            android:scaleY=".75"
-            android:text="@string/male_radio_button"
-            android:textSize="16sp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/genderLabel"
-            app:layout_constraintEnd_toEndOf="@+id/speciesET" />
-
-    </RadioGroup>
-
-    <Spinner
-        android:id="@+id/levelSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/levels"
-        app:layout_constraintBaseline_toBaselineOf="@+id/levelLabel"
-        app:layout_constraintEnd_toEndOf="@+id/weightET" />
-
-    <Button
-        android:id="@+id/viewButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/view_button"
+        android:text="@string/delete_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resetButton" />
+        app:layout_constraintTop_toBottomOf="@+id/defenseLabel" />
 
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteButton" />
+
+    <Button
+        android:id="@+id/previousButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="@string/previous_button"
+        app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+        app:layout_constraintTop_toTopOf="@+id/deleteButton" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/next_button"
+        app:layout_constraintStart_toEndOf="@+id/deleteButton"
+        app:layout_constraintTop_toTopOf="@+id/deleteButton" />
+
+    <TextView
+        android:id="@+id/nationalNumberTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nationalNumberLabel" />
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/nationalNumberTV"
+        app:layout_constraintTop_toTopOf="@+id/nameLabel" />
+
+    <TextView
+        android:id="@+id/speciesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/nameTV"
+        app:layout_constraintTop_toTopOf="@+id/speciesLabel" />
+
+    <TextView
+        android:id="@+id/genderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/speciesTV"
+        app:layout_constraintTop_toTopOf="@+id/genderLabel" />
+
+    <TextView
+        android:id="@+id/heightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/genderTV"
+        app:layout_constraintTop_toTopOf="@+id/heightLabel" />
+
+    <TextView
+        android:id="@+id/weightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/heightTV"
+        app:layout_constraintTop_toTopOf="@+id/weightLabel" />
+
+    <TextView
+        android:id="@+id/levelTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/weightTV"
+        app:layout_constraintTop_toTopOf="@+id/levelLabel" />
+
+    <TextView
+        android:id="@+id/hpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/levelTV"
+        app:layout_constraintTop_toTopOf="@+id/hpLabel" />
+
+    <TextView
+        android:id="@+id/attackTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/hpTV"
+        app:layout_constraintTop_toTopOf="@+id/attackLabel" />
+
+    <TextView
+        android:id="@+id/defenseTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/attackTV"
+        app:layout_constraintTop_toTopOf="@+id/defenseLabel" />
+
+    <TextView
+        android:id="@+id/idTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheaderLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
